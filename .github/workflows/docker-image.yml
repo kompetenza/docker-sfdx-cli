@@ -21,6 +21,6 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag tlbatista/docker-sfdx-cli:$(date +%s)
+      run: docker build . --file Dockerfile --tag kzdocker-sfdx-cli:$(date +%s)
     - name: Docker Push
-      run: docker push tlbatista/docker-sfdx-cli
+      run: docker push tlbatista/docker-sfdx-cli:kzdocker-sfdx-cli
