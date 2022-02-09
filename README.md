@@ -11,7 +11,7 @@ Includes:
 - openssh for CircleCI SSH access
 - SalesforceDX CLI from NPM
 
-Image on docker hub: https://hub.docker.com/r/salestrip/sfdx-cli/
+Image on docker hub: https://hub.docker.com/r/tlbatista/sfdx-cli/docker-sfdx-cli
 
 [![Docker Automated build](https://img.shields.io/docker/automated/salestrip/sfdx-cli.svg?style=plastic)](https://hub.docker.com/r/salestrip/sfdx-cli/builds/)
 
