@@ -12,7 +12,7 @@ RUN npm install -g @salesforce/cli
 
 # Check if the Salesforce CLI is installed correctly and in PATH
 RUN which sf
-RUN sf --version
+RUN /usr/local/bin/sf --version
 
 # Check installed CLI version and plugins
 RUN sf plugins --core
