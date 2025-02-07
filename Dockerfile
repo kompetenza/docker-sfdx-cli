@@ -7,9 +7,7 @@ RUN apk add --update --no-cache git openssh ca-certificates openssl jq gettext x
 
 # install latest sfdx from npm
 RUN npm install @salesforce/cli --global
-#
-RUN sf version
-#
+RUN sf --version
 RUN sf plugins --core
 
 # revert to low privilege user
