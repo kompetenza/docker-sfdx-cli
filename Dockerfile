@@ -15,10 +15,12 @@
 # revert to low privilege user
 # USER node
 
-# Use a full-featured Node.js image
-FROM node:16-alpine
+FROM busybox
 
-# Install dependencies for Salesforce CLI
+# Installing necessary dependencies
+RUN apk add --no-cache nodejs npm
+
+# Install Salesforce CLI
 RUN npm install -g @salesforce/cli
 
 # Verify installation
