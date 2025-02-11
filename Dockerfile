@@ -13,6 +13,7 @@ RUN npm install -g npm@11.1.0
 # RUN sfdx --version
 # RUN sfdx plugins --core
 RUN npm install -g @salesforce/cli
+RUN echo $SHELL
 RUN /usr/local/bin/sf --version
 RUN sf version
 
