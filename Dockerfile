@@ -1,5 +1,6 @@
 # use small node image
-FROM node:alpine
+FRO#M node:alpine
+FROM node:16-alpine
 
 # install git ca-certificates openssl openssh for CircleCI
 # install jq for JSON parsing
@@ -13,8 +14,6 @@ RUN npm install -g npm@11.1.0
 # RUN sfdx --version
 # RUN sfdx plugins --core
 RUN npm install -g @salesforce/cli
-RUN echo $SHELL
-RUN echo 'sf --version'
 RUN sf version
 
 # revert to low privilege user
