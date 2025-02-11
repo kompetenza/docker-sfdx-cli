@@ -5,11 +5,13 @@ FROM node:alpine
 # install jq for JSON parsing
 RUN apk add --update --no-cache git openssh ca-certificates openssl jq gettext xmlstarlet curl
 
+RUN node -v
+RUN npm -v
 # install latest sfdx from npm
 # RUN npm install sfdx-cli --global
 # RUN sfdx --version
 # RUN sfdx plugins --core
-RUN npm install @salesforce/cli --global
+RUN sudo npm install -g @salesforce/cli
 RUN sfdx --version
 RUN sf version
 
