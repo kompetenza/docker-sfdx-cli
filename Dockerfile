@@ -1,5 +1,5 @@
 # use small node image
-#FROM node:alpine
+# FROM node:alpine
 FROM node:16-alpine
 
 # install git ca-certificates openssl openssh for CircleCI
@@ -8,7 +8,7 @@ RUN apk add --update --no-cache git openssh ca-certificates openssl jq gettext x
 
 RUN node -v
 RUN npm -v
-RUN npm install -g npm@11.1.0
+# RUN npm install -g npm@11.1.0
 # install latest sfdx from npm
 # RUN npm install sfdx-cli --global
 # RUN sfdx --version
