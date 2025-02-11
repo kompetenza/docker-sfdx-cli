@@ -11,8 +11,7 @@ RUN npm -v
 # RUN npm install sfdx-cli --global
 # RUN sfdx --version
 # RUN sfdx plugins --core
-RUN sudo npm install -g @salesforce/cli
-RUN sfdx --version
+RUN npm install -g @salesforce/cli
 RUN sf version
 
 # revert to low privilege user
