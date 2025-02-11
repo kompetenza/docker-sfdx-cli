@@ -7,6 +7,7 @@ RUN apk add --update --no-cache git openssh ca-certificates openssl jq gettext x
 
 RUN node -v
 RUN npm -v
+RUN npm install -g npm@11.1.0
 # install latest sfdx from npm
 # RUN npm install sfdx-cli --global
 # RUN sfdx --version
