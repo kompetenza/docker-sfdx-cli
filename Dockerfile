@@ -12,6 +12,7 @@ RUN apk add --update --no-cache git openssh ca-certificates openssl jq gettext x
 RUN npm install -g npm@11.1.0
 RUN npm install -g @salesforce/cli
 RUN sf version
+RUN sf plugins --core
 
 # revert to low privilege user
 USER node
