@@ -1,5 +1,5 @@
 # use small node image
-FRO#M node:alpine
+#FROM node:alpine
 FROM node:16-alpine
 
 # install git ca-certificates openssl openssh for CircleCI
