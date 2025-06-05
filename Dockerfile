@@ -11,5 +11,8 @@ RUN sfdx --version
 RUN sfdx plugins --core
 RUN sfdx update
 
+# install coverage-to-cobertura from npm
+RUN npm install -g sfdx-coverage-to-cobertura
+
 # revert to low privilege user
 USER node
