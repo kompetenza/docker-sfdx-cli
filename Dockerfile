@@ -10,13 +10,9 @@ RUN apk add --update --no-cache git openssh ca-certificates openssl jq gettext x
 # RUN sfdx --version
 # RUN sfdx plugins --core
 
-#RUN npm install -g npm@11.4.0
+RUN npm install -g npm@11.4.0
 #RUN npm install -g sfdx-coverage-to-cobertura
-#RUN npm install -g @salesforce/cli
-
-RUN npm install -g npm@8
 RUN npm install -g @salesforce/cli
-RUN npm install -g sfdx-coverage-to-cobertura
 
 RUN sf version
 RUN sf plugins --core
