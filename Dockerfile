@@ -16,7 +16,6 @@ RUN sf version
 RUN sf plugins --core
 RUN sf plugins install sfdx-git-delta
 
-
 # revert to low privilege user
 USER node
 
