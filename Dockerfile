@@ -1,6 +1,6 @@
 # use small node image
 FROM node:alpine
-ENV SF_PLUGINS_ALLOW_UNSIGNED=true
+ENV ENV SF_ALLOW_UNSAFE_PLUGINS=true
 # install git ca-certificates openssl openssh for CircleCI
 # install jq for JSON parsing
 RUN apk add --update --no-cache git openssh ca-certificates openssl jq gettext xmlstarlet curl coreutils
