@@ -1,6 +1,6 @@
 # use small node image
 FROM node:alpine
-ENV SF_PLUGIN_TRUSTED=true
+ENV SF_PLUGINS_ALLOW_UNSIGNED=true
 # install git ca-certificates openssl openssh for CircleCI
 # install jq for JSON parsing
 RUN apk add --update --no-cache git openssh ca-certificates openssl jq gettext xmlstarlet curl coreutils
@@ -15,7 +15,7 @@ RUN npm install -g @salesforce/cli
 
 RUN sf version
 RUN sf plugins --core
-RUN yes | sf plugins install sfdx-git-delta
+RUN sf plugins install sfdx-git-delta
 
 # revert to low privilege user
 USER node
