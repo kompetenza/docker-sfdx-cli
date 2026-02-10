@@ -15,7 +15,7 @@ RUN npm install -g @salesforce/cli
 
 RUN sf version
 RUN sf plugins --core
-RUN sf plugins install sfdx-git-delta
+RUN sf plugins install sfdx-git-delta --force
 
 # revert to low privilege user
 USER node
