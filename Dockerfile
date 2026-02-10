@@ -14,6 +14,7 @@ RUN npm install -g sfdx-coverage-to-cobertura
 RUN npm install -g @salesforce/cli
 RUN sf version
 RUN sf plugins --core
+RUN sf plugins install sfdx-git-delta
 
 
 # revert to low privilege user
