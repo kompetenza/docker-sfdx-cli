@@ -9,14 +9,14 @@ RUN apk add --update --no-cache git openssh ca-certificates openssl jq gettext x
 # RUN npm install sfdx-cli --global
 # RUN sfdx --version
 # RUN sfdx plugins --core
-
+ENV SF_PLUGIN_TRUSTED=true
 RUN npm install -g npm@11.4.0
 #RUN npm install -g sfdx-coverage-to-cobertura
 RUN npm install -g @salesforce/cli
 
 RUN sf version
 RUN sf plugins --core
-RUN sf plugins install sfdx-git-delta --yes
+RUN sf plugins install sfdx-git-delta
 
 # revert to low privilege user
 USER node
